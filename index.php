@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Exercice 1 : Inverser un string</title>
+        <title>Exercices en PHP</title>
         <meta charset="utf-8">
     </head>
 <body>
@@ -11,6 +11,7 @@
     echo "La chaîne originale est ".$str;
     echo "<br/>La chaîne inversée est ";
     Reverse($str);
+    Palindrome($str, strrev($str));
     ?>
 </body>
 </html>
