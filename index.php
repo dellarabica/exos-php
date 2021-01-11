@@ -7,11 +7,11 @@
 <body>
     <?php
     require_once('functions.php');
-    $str = "Lorem ipsum";
+    $str = "Kayak";
+    $strrev = Reverse($str);
     echo "La chaîne originale est ".$str;
-    echo "<br/>La chaîne inversée est ";
-    Reverse($str);
-    Palindrome($str, strrev($str));
+    echo "<br/>La chaîne inversée est ".$strrev;
+    Palindrome($str, $strrev);
     ?>
 </body>
 </html>
