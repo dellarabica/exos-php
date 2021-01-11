@@ -11,8 +11,8 @@ function Reverse($str){
 }
 
 function Palindrome($str, $strrev){
-    $str1 = strtoupper($str);
-    $str2 = strtoupper($strrev);
+    $str1 = strtolower($str);
+    $str2 = strtolower($strrev);
     echo ($str1 == $str2) ? "<br/>La chaîne est donc un palindrome" : "<br/>La chaîne n'est donc pas un palindrome";
 }
 ?>
