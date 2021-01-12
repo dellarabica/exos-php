@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Exercices en PHP</title>
+        <title>Exercices en PHP 11-01-2021</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="/style.css">
     </head>

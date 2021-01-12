@@ -1,0 +1,24 @@
+p {
+    text-align: center;
+}
+
+.white,
+.black {
+    border: 1px solid black;
+    height: 45px;
+    width: 45px;
+}
+
+.black {
+    background-color: black;
+}
+
+.white {
+    background-color: white;
+}
+
+.board {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
