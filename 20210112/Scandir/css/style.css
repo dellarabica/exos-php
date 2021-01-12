@@ -1,0 +1,12 @@
+.file {
+    color: black;
+}
+
+.folder {
+    color: red;
+    font-weight: bold;
+}
+
+.subfolder {
+    padding-left: 20px;
+}

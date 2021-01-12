@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Liste de tâches
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let item of items">
+            <ion-icon [name]="item.icon" slot="start"></ion-icon>
+            {{item.title}}
+            <div class="item-note" slot="end">
+                {{item.note}}
+            </div>
+        </ion-item>
+    </ion-list>
+
+    <ion-fab-button add (click)="openModal()" color="success">
+        <ion-icon c name="add-circle-outline"></ion-icon>
+    </ion-fab-button>
+
+    <div *ngIf="notasks !== true; else tkElse" id="mess">
+        <h4>T'as rien à faire aujourd'hui, feignasse</h4>
+    </div>
+    <ng-template #tkElse>
+        <h4 id="mess">Va travailler au lieu de rien foutre sur ton siège là</h4>
+    </ng-template>
+
+    <div *ngIf="notasks === true">
+        <div id="compteur">
+            <p [class.congrats]="rienAFaire()"><strong>{{feedback}}</strong></p>
+        </div>
+        <div id="list">
+            <ion-list>
+                <ion-list-header>Liste des tâches</ion-list-header>
+                <ion-item *ngFor="let task of tasks; let i = index">
+                    <div id="check">
+                        <ion-checkbox [(ngModel)]="task.done" (ionChange)="updateListAndMessage()" color="primary"></ion-checkbox>
+                    </div>
+                    <span [class.done]="task.done" [color]="red"> [{{task.author}}] {{task.name}} </span>
+                    <ion-fab-button mini color="secondary" (click)="editinfo(task)" slot="end">
+                        <ion-icon c name="create-outline"></ion-icon>
+                    </ion-fab-button>
+                    <ion-fab-button mini color="light" (click)="showInfo(task)" slot="end">
+                        <ion-icon c name="information-circle-outline"></ion-icon>
+                    </ion-fab-button>
+                    <ion-fab-button mini color="danger" (click)="alertDelTask(task)" slot="end">
+                        <ion-icon c name="trash-outline"></ion-icon>
+                    </ion-fab-button>
+                </ion-item>
+            </ion-list>
+        </div>
+    </div>
+
+</ion-content>

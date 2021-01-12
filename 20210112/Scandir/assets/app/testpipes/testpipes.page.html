@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Tests en utilisant des pipes
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <h4>Changement d'accents</h4>
+    <ion-input type="text" placeholder="Prénom" [(ngModel)]="prenom"></ion-input>
+    <ion-input type="text" placeholder="Nom" [(ngModel)]="nom"></ion-input>
+    <ion-input type="number" placeholder="Âge" [(ngModel)]="age"></ion-input>
+    <p>Je m'appelle {{ prenom | accents }} {{ nom | uppercase }} - J'ai {{ age | currency }} ans.</p>
+    <p>Machin</p>
+    <h4>Calcul de distances</h4>
+    <ion-input type="number" placeholder="Distance" [(ngModel)]="dst"></ion-input>
+    <p>La distance est {{dst | distance}}</p>
+</ion-content>

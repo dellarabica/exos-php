@@ -1,0 +1,49 @@
+#compteur,
+#mess {
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#check {
+    margin-right: 5%;
+}
+
+#list {
+    margin-top: 2%;
+}
+
+#list ion-list ion-list-header {
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+}
+
+.done {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.trash ion-fab-button {
+    color: tomato;
+}
+
+ion-fab-button[mini] {
+    margin: 8px;
+    width: 2.2em;
+    height: 2.2em;
+    line-height: auto;
+}
+
+ion-fab-button[add] {
+    align-items: center;
+}
+
+ion-badge {
+    font-size: 17px;
+}
+
+p {
+    font-size: 0.8em;
+}
