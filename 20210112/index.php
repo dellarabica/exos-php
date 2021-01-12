@@ -26,12 +26,13 @@
    $arrayS = SortArray($num_2, $sort); //On génère et on trie
    DisplayArray($arrayS); //On les affiche
 
-   echo "<br/><p>Exercice 4</p>";
+  echo "<br/><p>Exercice 4</p>";
    $lin = 6;
    $col = 6;
    $sort = "ASC"; //Comment les nombres seront triés (ASC / DESC)
-   $multi = GenMulti($lin, $col, $sort); //On génère un tableau multidimensionnel et on trie chaque ligne
-   DisplayMultiArray($multi);
+   $multi = GenMulti($lin, $col); //On génère un tableau multidimensionnel et on trie chaque ligne
+   $multiS = SortMulti($multi, $sort);
+  DisplayMultiArray($multiS);
 
 ?>
 </body>

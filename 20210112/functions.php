@@ -95,31 +95,47 @@ function SortArray($nbitem, $sorttype){
     return $arraybase;
 }
 
-function GenMulti($l, $c, $sort){
+function GenMulti($lin, $col){
     $mult = array();
-    for ($i=0;$i<$l; $i++){
-        $array = RandArray($c);
-        $arrayS = SortArray($array, $sort);
-        array_push($mult, $arrayS);
-        echo var_dump($mult);
+    $arrayR = null;
+    for ($i=0;$i<$lin; $i++){
+        $arrayR = RandArray($col);
+        array_push($mult, $arrayR);
     }
-    
-   return $mult;
+    //echo var_dump($mult);
+    return $mult;
+}
+
+function SortMulti($array, $sort){
+    for($i=0;$i<count($array);$i++){
+            switch($sort)
+    {
+        case "ASC":
+
+            sort($array[$i]);
+            break;
+
+        case "DESC":
+            rsort($array[$i]);
+            break;
+
+        default:
+            break;
+    }
+    }
+
+    return $array;
 }
 
 function DisplayMultiArray($mult){
-    $rows = array();
+    echo "<table>";
     for($i=0;$i<count($mult);$i++){
-        $cells = array();
-        $ds = $mult[$i];
-        for ($ii = 0; $ii < count($mult[$i]); $ii++) {
-            $data = $ds[$ii];
-            $cells[] = "<td>{$data}</td>";
+        echo "<tr>";
+        for($j=0; $j<count($mult[$i]); $j++){
+            echo "<td>".$mult[$i][$j]."</td>";
         }
-        $rows[] = "<tr>" . implode('', $cells) . "</tr>";
+        echo "</tr>";
     }
-    echo var_dump($rows);
-    $table = "<table>" . implode('', $rows) . "</table>";
-    echo $table;
+    echo "</table>";
 }
 ?>
