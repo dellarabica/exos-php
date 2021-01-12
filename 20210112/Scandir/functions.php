@@ -20,19 +20,19 @@ function listIt($path) {
     }
 
 function saveIt($path){
-    $myfile = fopen("folder.txt", "a") or die("Unable to open file!");
+    $myfile = fopen("folder.txt", "a+") or die("Unable to open file!");
     $filelist = scandir($path);
     foreach($filelist as $file) {
         // on ignore les dossiers "." et ".."
         if($file != "." AND $file != "..") {
             if (is_file($path . $file)) {
                 // L'élément scanné est un fichier
-                $str = "Fichier : ".$path.$file."\r\n";
-                fwrite("folder.txt", $str);
+                $str = "Fichier : ".$path.$file.PHP_EOL;
+                fwrite($myfile, $str);
             } else {
                 // L'élément scanné est un dossier -> on fait un scan dans ce dossier
-                $str = "Dossier : ".$path.$file."\r\n";
-                fwrite("folder.txt", $str);
+                $str = "Dossier : ".$path.$file.PHP_EOL;
+                fwrite($myfile, $str);
                 saveIt($path . $file . "/");
             }
         }
