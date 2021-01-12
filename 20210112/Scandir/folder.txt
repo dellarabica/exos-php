@@ -1,9 +1,4 @@
 Dossier : ./assets
-Dossier : ./css
-Fichier : ./folder.txt
-Fichier : ./functions.php
-Fichier : ./index.php
-Dossier : ./assets
 Dossier : ./assets/app
 Fichier : ./assets/app/api.service.spec.ts
 Fichier : ./assets/app/api.service.ts

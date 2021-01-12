@@ -10,6 +10,7 @@
     require_once('functions.php');
     $dir = "./";
     listIt($dir);
+    file_put_contents($dir.'folder.txt', ''); // on vide le fichier txt
     saveIt($dir);
     ?>
 </body>
