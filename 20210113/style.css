@@ -1,0 +1,162 @@
+/*
+h1,
+h3 {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 10px;
+}
+
+table,
+tr,
+td {
+    background-color: white;
+    justify-content: center;
+    border: 5px solid black;
+    padding: 10px;
+    color: black;
+    background-color: grey;
+}
+
+td {
+    height: 120px;
+    width: 120px;
+}
+*/
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    background-color: darkslategray;
+    align-items: center;
+    text-align: center;
+}
+
+header {
+    max-width: 1140px;
+    margin: auto;
+}
+
+header h1 {
+    font-size: 45px;
+    color: #b1b1b1;
+    width: 20%;
+    margin: auto;
+}
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+    margin-top: 4.5em;
+}
+
+.container>p {
+    text-align: center;
+    margin-bottom: 3em;
+    color: #91dc5a;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.tg-wrap {
+    display: inline-block;
+    width: 65%
+}
+
+.tg-wrap>table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0px auto;
+    width: 450px;
+    height: 450px;
+}
+
+.tg-wrap table tr td {
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    -khtml-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border: 5px solid #c7c7c7;
+    word-break: normal;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+}
+
+.tg-wrap table tr td a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.score {
+    display: inline-block;
+    width: 34%;
+    margin-left: 0.5em;
+    vertical-align: top;
+    text-align: center;
+}
+
+.score h1 {
+    text-transform: uppercase;
+    color: #096a8e;
+}
+
+.score>p {
+    font-size: 20px;
+    text-align: left;
+    margin-left: 2.5em;
+    text-transform: uppercase;
+    color: #989494;
+}
+
+.draw {
+    text-align: center!important;
+    font-size: 35px!important;
+    color: #f37777!important;
+}
+
+.reset {
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 3.5em;
+}
+
+.reset>a {
+    text-decoration: none;
+    color: #6b6868;
+    border: 1px solid #096a8e;
+    padding: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: all 0.7s;
+}
+
+.reset>a:hover {
+    background-color: #096a8e;
+    color: #fff;
+}
+
+footer {
+    max-width: 1140px;
+    margin: auto;
+    text-align: center;
+}
+
+footer>p {
+    color: #989494;
+}
+
+footer>p>a {
+    text-decoration: none;
+    color: #989494;
+}
+
+footer>p>a:hover {
+    color: #00a651;
+}
